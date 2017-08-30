@@ -47,6 +47,25 @@ For api, Node server (in this example) is started in 5000 port [http://localhost
 Now we need to access the frontend pages ('build' folder) via node server. For this, we'll tell express to use 'build' folder using one line of code (See [here](https://github.com/rambabusaravanan/mern-starter/commit/62ce2910d167b89d4b3e531c1bded593c88fb178#diff-78c12f5adc1848d13b1c6f07055d996eR28))
 
 
+### Connecting MongoDB - using 'mongoskin'
+
+*Use `git checkout step-4`*
+
+**Insert data via http post api call or in mongo shell directly**
+
+POST /api/user  --data '{"name": "Andro", "age": 24}'
+
+**Access the data via api or in [main page](http://localhost:5000)**
+
+GET /api/user
+
+GET /api/user/{userid}
+
+GET /api/search?name=Andro
+
+GET /api/search?age=24
+
+
 ### Important
 
 Whenever you want to view both pages with api calls in action, always run `npm run build` followed by `node server.js`
