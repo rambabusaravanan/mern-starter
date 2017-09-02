@@ -3,8 +3,8 @@ const express = require('express');
 const app = express();
 
 const mongo = require('mongoskin');
-const db = mongo.db("mongodb://localhost:27017/test", { native_parser: true });
-
+const db = mongo.db(process.env.MONGOURL || "mongodb://localhost:27017/test", { native_parser: true });
+console.log('DB URL', process.env.MONGOURL || "mongodb://localhost:27017/test")
 
 /* API CONTROLLERS */
 
